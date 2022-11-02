@@ -9,7 +9,7 @@ const todoSlice = createSlice(
         reducers:{
             addTask:(state,action)=>{
             const newTask={
-               id: state.length+1,
+               id:  state[state.length-1].id+1,
               done:false, 
                text:action.payload
                }
